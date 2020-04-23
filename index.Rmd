@@ -1,0 +1,46 @@
+---
+title: "My Shiny App"
+author: "Jelena Erdmann"
+date: "4/23/2020"
+output: ioslides_presentation
+---
+
+## Introduction
+
+My Shiny App displays a leaflet map. By giving coordinates for longitude and latitude the user can navigate to other locations. 
+
+The App can be accesed here:\
+[App on shinyapps.io](https://jelly90.shinyapps.io/DDP_Week_4_Assignment/)
+
+The code for the app 'Shiny.R' is provided on Github:\
+[My Github Repository](https://github.com/Jelly90/DevDataProd2)
+
+## How the App works
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE, include = FALSE}
+library(leaflet)
+```
+
+
+```{r}
+leaflet() %>%
+      addTiles() %>%
+      addMarkers(lat=48.858243, lng=2.294374)
+
+       
+```
+
+## Change Google Coordinates
+
+You can change the coordinates in the shiny app to navigate the map to other locations.
+
+
+```{r}
+leaflet() %>%
+      addTiles() %>%
+      addMarkers(lat=43.723053, lng=10.396479)
+```
+
+
+## Thank you for trying my App!
+
